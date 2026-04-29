@@ -35,4 +35,20 @@ app.post('/data', (req, res) => {
     //res.json(data);
 });
 
+// 任務格式說明 
+// 每筆任務標題（string），例如 '學會 Express'
+const tasks = [
+  '學會 Express',
+  '學會 fetch API',
+  '做出第一個 Todo App',
+  'Web 程式作業'
+];
+
+// API：取得所有任務
+// 路徑：GET /tasks
+// 回傳：JSON 陣列（tasks）
+app.get('/tasks', (req, res) => {
+  res.json(tasks);
+});
+
 export default app;
