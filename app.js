@@ -51,4 +51,15 @@ app.get('/tasks', (req, res) => {
   res.json(tasks);
 });
 
+// API：新增任務
+// 路徑：POST /add
+app.post('/add', (req, res) => {
+    // 從 request 的 JSON body 取出 task 屬性（需先用 app.use(express.json()) 解析）
+    const { task } = req.body;
+    // 將收到的 task 加入伺服器端的 tasks 陣列
+    tasks.push(task);
+    // 回應 HTTP 201（Created），並回傳剛新增的 task 與完整清單
+    res.status(201).json({ added: task, tasks });
+});
+
 export default app;
