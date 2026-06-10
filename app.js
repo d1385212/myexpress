@@ -38,10 +38,7 @@ app.post('/data', (req, res) => {
 // 任務格式說明 
 // 每筆任務標題（string），例如 '學會 Express'
 const tasks = [
-  '學會 Express',
-  '學會 fetch API',
-  '做出第一個 Todo App',
-  'Web 程式作業'
+  'Welcome to Express'
 ];
 
 // API：取得所有任務
